@@ -1,3 +1,7 @@
+ver 2.3:
+	Fix issue with UUID-128 attribute decoding.
+	Add support for OBEX over L2CAP decoding.
+
 ver 2.2:
 	Fix issue with L2CAP CID matching.
 	Add support for L2CAP extended window size decoding.
