@@ -2,7 +2,7 @@
 AM_MAKEFLAGS = --no-print-directory
 
 library_sources = lib/bluetooth.h lib/bluetooth.c \
-			lib/hci_lib.h lib/hci.h lib/hci.c lib/l2cap.h
+			lib/hci_lib.h lib/hci.h lib/hci.c lib/l2cap.h lib/a2mp.h
 
 parser_sources =  parser/parser.h parser/parser.c \
 					parser/lmp.c \
