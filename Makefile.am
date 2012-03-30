@@ -19,6 +19,7 @@ parser_sources =  parser/parser.h parser/parser.c \
 					parser/avdtp.c \
 					parser/avctp.c \
 					parser/avrcp.c \
+					parser/sap.c \
 					parser/obex.c \
 					parser/capi.c \
 					parser/ppp.c \
