@@ -165,6 +165,8 @@ struct amp_chan_list {
 #define AMP_STATUS_PHYS_LINK_EXISTS			0x05
 #define AMP_STATUS_SECURITY_VIOLATION			0x06
 
+void amp_assoc_dump(int level, uint8_t *assoc, uint16_t len);
+
 #ifdef __cplusplus
 }
 #endif

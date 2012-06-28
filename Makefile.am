@@ -26,7 +26,8 @@ parser_sources =  parser/parser.h parser/parser.c \
 					parser/tcpip.c \
 					parser/ericsson.c \
 					parser/csr.c \
-					parser/bpa.c
+					parser/bpa.c \
+					parser/amp.c
 
 
 sbin_PROGRAMS = src/hcidump
