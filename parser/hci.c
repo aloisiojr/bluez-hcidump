@@ -766,6 +766,7 @@ static inline void ext_inquiry_data_dump(int level, struct frame *frm,
 	uint8_t len = data[0];
 	uint8_t type;
 	char *str;
+	uint16_t id;
 	int i;
 
 	if (len == 0)
@@ -817,6 +818,15 @@ static inline void ext_inquiry_data_dump(int level, struct frame *frm,
 	case 0x0a:
 		p_indent(level, frm);
 		printf("TX power level: %d\n", *((uint8_t *) data));
+		break;
+
+	case 0xff:
+		p_indent(level, frm);
+		id = btohs(bt_get_unaligned(((uint16_t *) data)));
+		printf("Manufacturer specific: id 0x%4.4x data", id);
+		for (i = 2; i < len; i++)
+			printf(" %2.2x", data[i]);
+		printf("\n");
 		break;
 
 	default:
