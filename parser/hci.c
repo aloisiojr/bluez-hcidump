@@ -820,6 +820,15 @@ static inline void ext_inquiry_data_dump(int level, struct frame *frm,
 		printf("TX power level: %d\n", *((uint8_t *) data));
 		break;
 
+	case 0x16:
+		p_indent(level, frm);
+		id = btohs(bt_get_unaligned((uint16_t *) data));
+		printf("Service data: uuid 0x%4.4x data", id);
+		for (i = 2; i < len; i++)
+			printf(" %2.2x", data[i]);
+		printf("\n");
+		break;
+
 	case 0xff:
 		p_indent(level, frm);
 		id = btohs(bt_get_unaligned(((uint16_t *) data)));
